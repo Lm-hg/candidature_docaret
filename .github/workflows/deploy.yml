@@ -28,8 +28,8 @@ jobs:
 
       - name: Prepare site files
         run: |
-          mkdir -p candidature_docaret/site
-          cp candidature_docaret/index.html candidature_docaret/script.js candidature_docaret/styles.css candidature_docaret/site/
+          mkdir -p site
+          cp index.html script.js styles.css site/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -37,7 +37,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: candidature_docaret/site
+          path: site
 
       - name: Deploy to GitHub Pages
         id: deployment
